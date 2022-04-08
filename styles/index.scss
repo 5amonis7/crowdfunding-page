@@ -1,0 +1,164 @@
+@import './config.scss';
+@import './nav.scss';
+@import './responsive.scss';
+
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // position: relative;
+    bottom: 6rem;
+}
+
+// Back up this project
+
+#back-project{
+    text-align: center;
+    line-height: 1.5;
+
+    & > img{
+        position: relative;
+        transform: translateY(-50%);
+    }
+
+    & p{
+        margin: 1rem 0;
+    }
+
+    &_button {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+        margin: 1rem 0 2rem 0;
+    }
+}
+
+// Analytics
+#analytics{
+    text-align: center;
+    justify-content: space-evenly;
+
+    & .analytics-line{
+        height: 1px;
+        width: 6rem;
+        background-color: rgba(128, 128, 128, 0.5);
+        border: none;
+    }
+
+    & .analytics-details{
+        padding: 2rem;
+        line-height: 1.5;
+
+        & h1{
+            font-size: 1.8rem;
+        }
+    
+    }
+
+    & .outerbar{
+        width: 90%;
+        height: 1rem;
+        border-radius: 20px;
+        background-color: rgba(128, 128, 128, 0.2);
+        margin-bottom: 2rem;
+        position: relative;
+    }
+
+    & .innerbar{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 80%;
+        height: 100%;
+        background-color: $cyan;
+        border-radius: 20px;
+    }
+}
+
+
+// About
+
+#about{
+    padding: 2rem 0;
+
+    & .about-descriptions{
+        margin: 1rem 0;
+    }
+}
+
+// Selection screen
+
+#selection-screen{
+    position: absolute;
+    top: 0;
+    height: 370vh;
+    padding-top: 8rem;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 100;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(182, 182, 182, 0.5));
+
+    & #selection-title{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 1rem 0;
+    }
+
+    & #selection-description{
+        line-height: 1.5;
+        font-size: 16px;
+    }
+
+    #no-reward{
+        font-size: 18px;
+    }
+
+    & .card{
+        position: relative;
+        bottom: 25rem;
+    }
+}
+
+.enter-pledge{
+    border-top: 1px solid rgba(128, 128, 128, 0.5);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem 1rem 1rem;
+    height: 0;
+    overflow: hidden;
+    transition: .05s all ease;
+    opacity: 0;
+
+    & input{
+        border: none;
+        font-size: 18px;
+        text-align: center;
+        padding: 1.5rem 0;
+        outline: none;
+
+        ::placeholder{
+            color: rgba(128, 128, 128, 0.5);
+        }
+    }
+
+    & .continue{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+
+

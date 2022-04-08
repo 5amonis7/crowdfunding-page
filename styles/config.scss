@@ -1,0 +1,227 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Commissioner', sans-serif;
+    background-color: rgb(243, 243, 243);
+    cursor: default;
+}
+
+
+// Colors
+// Primary 
+$cyan: hsl(176, 50%, 47%);
+$dark-cyan: hsl(176, 72%, 28%);
+
+// Neutral 
+$black: hsl(0, 0%, 0%);
+$dark-grey: hsl(0, 0%, 48%);
+
+// Font
+$font-weights: ("regular": 400, "medium": 500, "bold": 700);
+
+// Sizes
+@mixin media-md{
+    @media screen and (min-width: 768px){
+        @content;
+    }
+}
+@mixin media-lg{
+    @media screen and (min-width: 1024px){
+        @content;
+    }
+}
+
+// Utilities
+
+.card{
+    border: 1px solid rgba(128, 128, 128, 0.2);
+    width: 90%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.inner-card{
+    border: 1px solid rgba(128, 128, 128, 0.5);
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // padding: 1.5rem;
+    border-radius: 10px;
+    margin: 1rem 0;
+
+    &_item{
+        line-height: 1.5;
+        margin-bottom: 1.5rem;
+        padding: .5rem 1.5rem 0 1.5rem;
+    }
+
+    & span{
+        font-size: 16px;
+        padding: 0 .5rem;
+    }
+}
+
+.item-left{
+    display: flex;
+    align-items: center;
+}
+
+.small-images{
+    width: 4rem;
+    height: auto;
+}
+
+.rounded-button{
+    background-color: $cyan;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    width: 13rem;
+    height: 4rem;
+    font-size: 16px;
+    color: white;
+    font-weight: map-get($font-weights, "bold" );
+    cursor: pointer;
+}
+
+.small-rounded-cyan{
+    background-color: $cyan;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    width: 8rem;
+    height: 4rem;
+    font-size: 16px;
+    color: white;
+    font-weight: map-get($font-weights, "bold" );
+    cursor: pointer;
+}
+.small-rounded-white{
+    background-color: white;
+    border: 1px solid rgba(128, 128, 128, 0.5);
+    outline: none;
+    border-radius: 30px;
+    width: 8rem;
+    height: 4rem;
+    font-weight: map-get($font-weights, "bold" );
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 1.2rem;
+
+}
+
+.btn-padding{
+    padding: 0 0 1rem 1rem;
+}
+
+.text-grey{
+    color: $dark-grey;
+}
+.text-cyan{
+    color: $cyan;
+}
+
+.bold{
+    font-weight: map-get($font-weights, "bold" );
+}
+
+.text-left{
+    width: 85%;
+    text-align: left;
+}
+
+.font-big{
+    font-size: 2rem;
+}
+
+.greyed-out{
+    opacity: .3;
+}
+
+.greyed-button{
+    background-color: $dark-grey;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    width: 13rem;
+    height: 4rem;
+    font-size: 16px;
+    color: white;
+    font-weight: map-get($font-weights, "bold" );
+    cursor: default;
+}
+
+#backdrop{
+    background: linear-gradient(to bottom, black, rgb(182, 182, 182));
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    display: none;
+    transition: .5s opacity ease;
+    z-index: 90;
+}
+
+input[type='radio'] {
+    -webkit-appearance: none;
+    width: 24px;
+    height: 24px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    outline: none;
+    border: 1px solid gray;
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type='radio']:before {
+    content: '';
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+}
+
+input[type="radio"]:checked:before {
+    background: $cyan;
+    
+}
+
+input[type="radio"]:checked {
+  border-color: 1px solid gray;
+}
+.select{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    word-wrap: nowrap;
+    width: 85%;
+}
+
+.no-wrap{
+    white-space: nowrap;
+}
+
+// Overriding pledge amount
+[data-visible = true]{
+    height: auto !important;
+    opacity: 1 !important;
+}
+
