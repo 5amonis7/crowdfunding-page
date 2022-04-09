@@ -123,7 +123,7 @@ yourPledge.forEach(e => {
 })
 
 let pledgedAmount = 0;
-let changedAmount = 0;
+let changedAmount = parseInt(pledgedAmount);
 
 function changePledge() {
 
@@ -175,8 +175,8 @@ function thankYou() {
 
     window.scrollTo(0, 0)
 
-    if(pledgedAmount === '0'){
-        alert("Pledge cannot be $0")
+    if(changedAmount > 1 || isNaN(changedAmount)){
+        alert("Please enter a valid amount.")
     }else{
         display(success, 'flex')
         selectionMenu()
