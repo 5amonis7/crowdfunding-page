@@ -32,7 +32,7 @@
     <div id="nav-links" data-visible="false">
       <a class="nav-item bold" href="#about">About</a>
       <a class="nav-item bold" href="#analytics">Discover</a>
-      <a class="nav-item bold" href="#start">Get Started</a>
+      <a class="nav-item bold" href="#">Get Started</a>
     </div>
 
   </nav>
@@ -54,7 +54,10 @@
 
         <button aria-controls="none" class="rounded-button selection-btn">Back this project</button>
 
-        <img id="bookmark" src="./images/icon-bookmark.svg" class="small-images" alt="bookmark">
+        <div id="bookmark">
+          <img src="./images/icon-bookmark.svg" class="small-images" alt="bookmark">
+          <p>Bookmark us!</p>
+        </div>
 
       </div>
 
@@ -63,23 +66,25 @@
     <!-- Analytics -->
     <section id="analytics" class="card">
 
-      <div class="analytics-details">
-        <h1 id="money-backed" class="bold">$89,914</h1>
-        <p class="text-grey">of $100,000 backed</p>
-      </div>
+      <div id="analytics-numbers">
+        <div class="analytics-details">
+          <h1 id="money-backed" class="bold">$89,914</h1>
+          <p class="text-grey">of $100,000 backed</p>
+        </div>
 
-      <hr class="analytics-line">
+        <hr class="analytics-line">
 
-      <div class="analytics-details">
-        <h1 id="total-backers" class="bold">5,007</h1>
-        <p class="text-grey">total backers</p>
-      </div>
+        <div class="analytics-details">
+          <h1 id="total-backers" class="bold">5,007</h1>
+          <p class="text-grey">total backers</p>
+        </div>
 
-      <hr class="analytics-line">
+        <hr class="analytics-line">
 
-      <div class="analytics-details">
-        <h1 class="bold">56</h1>
-        <p class="text-grey">days left</p>
+        <div class="analytics-details">
+          <h1 class="bold">56</h1>
+          <p class="text-grey">days left</p>
+        </div>
       </div>
 
       <div class="outerbar">
@@ -198,7 +203,7 @@
 
         <div class="inner-card_item select">
           <input id="none" class="radio-btn" name="pledge" type="radio" value="no-reward">
-          <label id="no-reward" class="text-select bold no-wrap">Pledge with no reward</label>
+          <label id="no-reward" class="bold no-wrap">Pledge with no reward</label>
         </div>
 
         <div class="inner-card_item">
@@ -226,7 +231,7 @@
           <input id="bamboo-stand" class="radio-btn" name="pledge" type="radio" value="Bamboo-stand">
 
           <div class="space">
-            <h3 class="text-select bold">Bamboo Stand</h3>
+            <h3 class="bold">Bamboo Stand</h3>
             <h3 class="text-cyan">Pledge $25 or more</h3>
           </div>
 
@@ -236,7 +241,7 @@
           <p class="text-grey">You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you’ll be added to a special Backer member list.</p>
         </div>
 
-        <div class="inner-card_item item-left">
+        <div class="inner-card_item item-left items-left">
           <h1 class="bold font-big">101</h1>
           <span class="text-grey">left</span>
         </div>
@@ -259,7 +264,7 @@
           <input id="black-edition-stand" class="radio-btn" name="pledge" type="radio" value="black-edition-stand">
 
           <div class="space">
-            <h3 class="text-select bold">Black Edition Stand</h3>
+            <h3 class="bold">Black Edition Stand</h3>
             <h3 class="text-cyan">Pledge $75 or more</h3>
           </div>
 
@@ -269,7 +274,7 @@
           <p class="text-grey"> You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer member list. Shipping is included.</p>
         </div>
 
-        <div class="inner-card_item item-left">
+        <div class="inner-card_item item-left items-left">
           <h1 class="bold font-big">64</h1>
           <span class="text-grey">left</span>
         </div>
@@ -302,7 +307,7 @@
           <p class="text-grey">You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added to our Backer member list. Shipping is included.</p>
         </div>
 
-        <div class="inner-card_item item-left">
+        <div class="inner-card_item item-left items-left">
           <h1 class="bold font-big">0</h1>
           <span class="text-grey">left</span>
         </div>

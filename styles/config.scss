@@ -44,6 +44,7 @@ $font-weights: ("regular": 400, "medium": 500, "bold": 700);
 .card{
     border: 1px solid rgba(128, 128, 128, 0.2);
     width: 90%;
+    max-width: 60rem;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -58,9 +59,9 @@ $font-weights: ("regular": 400, "medium": 500, "bold": 700);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    // padding: 1.5rem;
     border-radius: 10px;
     margin: 1rem 0;
+    position: relative;
 
     &_item{
         line-height: 1.5;
@@ -108,6 +109,11 @@ $font-weights: ("regular": 400, "medium": 500, "bold": 700);
     color: white;
     font-weight: map-get($font-weights, "bold" );
     cursor: pointer;
+}
+
+.rounded-button:hover,
+.small-rounded-cyan:hover{
+    background-color: $dark-cyan;
 }
 .small-rounded-white{
     background-color: white;
@@ -220,8 +226,9 @@ input[type="radio"]:checked {
 }
 
 // Overriding pledge amount
-[data-visible = true]{
+.inner-card > [data-visible = true]{
     height: auto !important;
     opacity: 1 !important;
 }
+
 
