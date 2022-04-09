@@ -30,9 +30,9 @@
     </div>
 
     <div id="nav-links" data-visible="false">
-      <a class="nav-item bold" href="#">About</a>
-      <a class="nav-item bold" href="#">Discover</a>
-      <a class="nav-item bold" href="#">Get Started</a>
+      <a class="nav-item bold" href="#about">About</a>
+      <a class="nav-item bold" href="#analytics">Discover</a>
+      <a class="nav-item bold" href="#start">Get Started</a>
     </div>
 
   </nav>
@@ -54,7 +54,7 @@
 
         <button aria-controls="none" class="rounded-button selection-btn">Back this project</button>
 
-        <img src="./images/icon-bookmark.svg" class="small-images" alt="bookmark">
+        <img id="bookmark" src="./images/icon-bookmark.svg" class="small-images" alt="bookmark">
 
       </div>
 
@@ -64,14 +64,14 @@
     <section id="analytics" class="card">
 
       <div class="analytics-details">
-        <h1 class="bold">$89,914</h1>
+        <h1 id="money-backed" class="bold">$89,914</h1>
         <p class="text-grey">of $100,000 backed</p>
       </div>
 
       <hr class="analytics-line">
 
       <div class="analytics-details">
-        <h1 class="bold">5,007</h1>
+        <h1 id="total-backers" class="bold">5,007</h1>
         <p class="text-grey">total backers</p>
       </div>
 
@@ -105,7 +105,7 @@
       </div>
 
       <!-- Bamboo Stand -->
-      <div class="inner-card">
+      <div id="start" class="inner-card">
 
         <div class="inner-card_item">
           <h3 class="bold">Bamboo Stand</h3>
@@ -173,202 +173,160 @@
     </section>
 
 
-    <!-- Selection screen -->
-    <div id="selection-screen">
 
-      <div class="card">
+  </main>
 
-        <div id="selection-title" class="text-left">
-          <h2>Back this project</h2>
 
-          <img id="close-menu" src="./images/icon-close-modal.svg" alt="close">
-        </div>
-  
-        <div id="selection-description" class="text-left text-grey">
-          <p>Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
-        </div>
 
-        <!-- No Reward -->
-        <div class="inner-card">
+  <!-- Selection screen -->
+  <div id="selection-screen">
 
-          <div class="inner-card_item select">
-            <input id="none" class="radio-btn" name="pledge" type="radio" value="no-reward">
-            <label id="no-reward" class="bold no-wrap">Pledge with no reward</label>
-          </div>
+    <div class="card">
 
-          <div class="inner-card_item">
-            <p class="text-grey">Choose to support us without a reward if you simply believe in our project. As a backer, you will be signed up to receive product updates via email.</p>
-          </div>
+      <div id="selection-title" class="text-left">
+        <h2>Back this project</h2>
 
-          <div class="enter-pledge" data-visible="false">
-            <input class="text-grey your-pledge" type="text" value="" placeholder="Enter your pledge">
+        <img id="close-menu" src="./images/icon-close-modal.svg" alt="close">
+      </div>
 
-          <div class="continue">
-            <div class="small-rounded-white"><span class="text-grey">$</span> <span id="amount">0</span></div>
-            <button class="small-rounded-cyan selection-btn">Continue</button>
-          </div>
+      <div id="selection-description" class="text-left text-grey">
+        <p>Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
+      </div>
 
-        </div>
-          
+      <!-- No Reward -->
+      <div class="inner-card">
 
+        <div class="inner-card_item select">
+          <input id="none" class="radio-btn" name="pledge" type="radio" value="no-reward">
+          <label id="no-reward" class="text-select bold no-wrap">Pledge with no reward</label>
         </div>
 
-
-        <!-- Bamboo Stand -->
-        <div class="inner-card">
-
-          <div class="inner-card_item select">
-            <input id="bamboo-stand" class="radio-btn" name="pledge" type="radio" value="Bamboo-stand">
-
-            <div class="space">
-              <h3 class="bold">Bamboo Stand</h3>
-              <h3 class="text-cyan">Pledge $25 or more</h3>
-            </div>
-
-          </div>
-
-          <div class="inner-card_item">
-            <p class="text-grey">You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you’ll be added to a special Backer member list.</p>
-          </div>
-
-          <div class="inner-card_item item-left">
-            <h1 class="bold font-big">101</h1>
-            <span class="text-grey">left</span>
-          </div>
-
-          <div class="enter-pledge" data-visible="false">
-              <input class="text-grey your-pledge" type="text" placeholder="Enter your pledge">
-
-            <div class="continue">
-              <div class="small-rounded-white"><span class="text-grey">$</span> <span id="amount">25</span></div>
-              <button class="small-rounded-cyan selection-btn">Continue</button>
-            </div>
-
-          </div>
+        <div class="inner-card_item">
+          <p class="text-grey">Choose to support us without a reward if you simply believe in our project. As a backer, you will be signed up to receive product updates via email.</p>
         </div>
 
-        <!-- Black Edition Stand -->
-        <div class="inner-card">
+        <div class="enter-pledge" data-visible="false">
+          <input class="text-grey your-pledge" type="text" value="" placeholder="Enter your pledge">
 
-          <div class="inner-card_item select">
-            <input id="black-edition-stand" class="radio-btn" name="pledge" type="radio" value="black-edition-stand">
-
-            <div class="space">
-              <h3 class="bold">Black Edition Stand</h3>
-              <h3 class="text-cyan">Pledge $75 or more</h3>
-            </div>
-
-          </div>
-
-          <div class="inner-card_item">
-            <p class="text-grey"> You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer member list. Shipping is included.</p>
-          </div>
-
-          <div class="inner-card_item item-left">
-            <h1 class="bold font-big">64</h1>
-            <span class="text-grey">left</span>
-          </div>
-
-          <div class="enter-pledge" data-visible="false">
-            <input class="text-grey your-pledge"type="text" placeholder="Enter your pledge">
-
-          <div class="continue">
-            <div class="small-rounded-white"><span class="text-grey">$</span> <span id="amount">75</span></div>
-            <button class="small-rounded-cyan selection-btn">Continue</button>
-          </div>
-
-        </div>
-        </div>
-
-        <!-- Mahogany Special Edition -->
-        <div class="inner-card greyed-out">
-
-          <div class="inner-card_item select">
-            <input class="radio-btn" name="pledge" type="radio" value="ahogany-special-edition" disabled>
-
-            <div class="space">
-              <h3 class="bold">Mahogany Special Edition</h3>
-              <h3 class="text-cyan">Pledge $200 or more</h3>
-            </div>
-
-          </div>
-
-          <div class="inner-card_item">
-            <p class="text-grey">You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added to our Backer member list. Shipping is included.</p>
-          </div>
-
-          <div class="inner-card_item item-left">
-            <h1 class="bold font-big">0</h1>
-            <span class="text-grey">left</span>
-          </div>
-
+        <div class="continue">
+          <div class="small-rounded-white"><span class="text-grey">$</span> <span class="amount">0</span></div>
+          <button class="small-rounded-cyan">Continue</button>
         </div>
 
       </div>
+        
+
+      </div>
+
+
+      <!-- Bamboo Stand -->
+      <div class="inner-card">
+
+        <div class="inner-card_item select">
+          <input id="bamboo-stand" class="radio-btn" name="pledge" type="radio" value="Bamboo-stand">
+
+          <div class="space">
+            <h3 class="text-select bold">Bamboo Stand</h3>
+            <h3 class="text-cyan">Pledge $25 or more</h3>
+          </div>
+
+        </div>
+
+        <div class="inner-card_item">
+          <p class="text-grey">You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you’ll be added to a special Backer member list.</p>
+        </div>
+
+        <div class="inner-card_item item-left">
+          <h1 class="bold font-big">101</h1>
+          <span class="text-grey">left</span>
+        </div>
+
+        <div class="enter-pledge" data-visible="false">
+            <input class="text-grey your-pledge" type="text" placeholder="Enter your pledge">
+
+          <div class="continue">
+            <div class="small-rounded-white"><span class="text-grey">$</span> <span class="amount">25</span></div>
+            <button class="small-rounded-cyan">Continue</button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Black Edition Stand -->
+      <div class="inner-card">
+
+        <div class="inner-card_item select">
+          <input id="black-edition-stand" class="radio-btn" name="pledge" type="radio" value="black-edition-stand">
+
+          <div class="space">
+            <h3 class="text-select bold">Black Edition Stand</h3>
+            <h3 class="text-cyan">Pledge $75 or more</h3>
+          </div>
+
+        </div>
+
+        <div class="inner-card_item">
+          <p class="text-grey"> You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer member list. Shipping is included.</p>
+        </div>
+
+        <div class="inner-card_item item-left">
+          <h1 class="bold font-big">64</h1>
+          <span class="text-grey">left</span>
+        </div>
+
+        <div class="enter-pledge" data-visible="false">
+          <input class="text-grey your-pledge"type="text" placeholder="Enter your pledge">
+
+        <div class="continue">
+          <div class="small-rounded-white"><span class="text-grey">$</span> <span class="amount">75</span></div>
+          <button class="small-rounded-cyan">Continue</button>
+        </div>
+
+      </div>
+      </div>
+
+      <!-- Mahogany Special Edition -->
+      <div class="inner-card greyed-out">
+
+        <div class="inner-card_item select">
+          <input class="radio-btn" name="pledge" type="radio" value="ahogany-special-edition" disabled>
+
+          <div class="space">
+            <h3 class="bold">Mahogany Special Edition</h3>
+            <h3 class="text-cyan">Pledge $200 or more</h3>
+          </div>
+
+        </div>
+
+        <div class="inner-card_item">
+          <p class="text-grey">You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added to our Backer member list. Shipping is included.</p>
+        </div>
+
+        <div class="inner-card_item item-left">
+          <h1 class="bold font-big">0</h1>
+          <span class="text-grey">left</span>
+        </div>
+
+      </div>
+
     </div>
+  </div>
 
 
+  <!-- Success -->
 
-  </main>
-  <div id="shadow"></div>
+  <div id="success">
+    <div class="card">
+      <img src="./images/icon-check.svg" alt="success">
 
+      <h2 class="bold">Thanks for your support!</h2>
 
-  <!-- Selection modal start --
+      <p class="text-grey">Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get an email once our campaign is completed.</p>
 
-  Back this project
-  Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?
+      <button id="finished" class="small-rounded-cyan">Got it!</button>
+    </div>
+  </div>
 
-  Pledge with no reward
-  Choose to support us without a reward if you simply believe in our project. As a backer, 
-  you will be signed up to receive product updates via email.
-
-  Bamboo Stand
-  Pledge $25 or more
-  You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and
-  you’ll be added to a special Backer member list.
-  101 left
-
-  <!-- Selected pledge start --
-  Enter your pledge
-  $25
-  Continue
-  <!-- Selected pledge end --
-
-  Black Edition Stand
-  Pledge $75 or more
-  You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer
-  member list. Shipping is included.
-  64 left
-
-  <!-- Selected pledge start --
-  Enter your pledge
-  $75
-  Continue
-  <!-- Selected pledge end --
-
-  Mahogany Special Edition
-  Pledge $200 or more
-  You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added
-  to our Backer member list. Shipping is included.
-  0 left
-
-  <!-- Selected pledge  start --
-  Enter your pledge
-  $200
-  Continue
-  <!-- Selected pledge end --
-
-  <!-- Selection modal end --
-
-  <!-- Success modal start --
-
-  Thanks for your support!
-  Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get
-  an email once our campaign is completed.
-  Got it!
-
-  <!-- Success modal end --
- -->
 
 
   <script src="./bundle.js"></script>
