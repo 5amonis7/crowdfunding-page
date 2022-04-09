@@ -9,7 +9,7 @@ const selectionBtn = document.querySelectorAll(".selection-btn");
 const radioBtn = document.querySelectorAll(".radio-btn");
 const yourPledge = document.querySelectorAll(".your-pledge");
 const success = document.querySelector("#success");
-const next = document.querySelectorAll(".small-rounded-cyan");
+const next = document.querySelectorAll(".continue-btn");
 const finished = document.querySelector("#finished");
 const innerBar = document.querySelector(".innerbar");
 const textSelect = document.querySelectorAll(".select");
@@ -114,6 +114,7 @@ radioBtn.forEach(e => {
 function helper(parent){
     parent.querySelector('.enter-pledge').setAttribute("data-visible", true)
     pledgedAmount = parent.querySelector('.amount').innerHTML
+    changedAmount = parseInt(pledgedAmount)
 }
 
 // Pledge amount
@@ -123,7 +124,7 @@ yourPledge.forEach(e => {
 })
 
 let pledgedAmount = 0;
-let changedAmount = parseInt(pledgedAmount);
+let changedAmount = 0;
 
 function changePledge() {
 
@@ -173,23 +174,26 @@ next.forEach(e => {
 
 function thankYou() {
 
+    console.log(changedAmount)
+
     window.scrollTo(0, 0)
 
-    if(changedAmount > 1 || isNaN(changedAmount)){
+    if(changedAmount < 1 || isNaN(changedAmount)){
         alert("Please enter a valid amount.")
     }else{
         display(success, 'flex')
         selectionMenu()
+
+        backers++
+        if(changedAmount === 0){
+            totalMoney += parseInt(pledgedAmount)
+        }else{
+            totalMoney += parseInt(changedAmount)
+        }
+
+        updateNumbers()
     }
 
-    backers++
-    if(changedAmount === 0){
-        totalMoney += parseInt(pledgedAmount)
-    }else{
-        totalMoney += parseInt(changedAmount)
-    }
-
-    updateNumbers()
 
     const parent = document.querySelector('[data-visible="true"]');
     parent.querySelector("input").value = "";
